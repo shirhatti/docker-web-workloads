@@ -1,0 +1,9 @@
+[submodule "iis-docker"]
+	path = iis-docker
+	url = https://github.com/microsoft/iis-docker
+[submodule "aspnet-docker"]
+	path = aspnet-docker
+	url = https://github.com/microsoft/aspnet-docker
+[submodule "dotnet-framework-docker"]
+	path = dotnet-framework-docker
+	url = https://github.com/microsoft/dotnet-framework-docker
