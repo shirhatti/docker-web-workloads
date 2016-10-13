@@ -48,9 +48,7 @@ $ASPNET462Dockerfile = ".\aspnet-docker\4.6.2"
 
 function Create-ASPNET462Image ([string]$Organization, [string]$Tag="latest") {
     $lines = Get-Content -Path $ASPNET462Dockerfile\Dockerfile
-    $lines
-    $lines[0].replace( "microsoft", $Organization)
-    $lines
+    $lines[0] = "FROM " + $Organization + $lines[0].Substring($lines[0].IndexOf("/"))
     $lines | docker build -t ${Organization}/aspnet:4.6.2-windowsservercore-${Tag} -
 }
 
